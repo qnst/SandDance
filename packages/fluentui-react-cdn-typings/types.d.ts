@@ -3,14 +3,14 @@
 export { IChoiceGroupOption } from '@fluentui/react/lib/ChoiceGroup';
 
 export {
-  IButtonProps,
-  IButtonStyles
+    IButtonProps,
+    IButtonStyles
 } from '@fluentui/react/lib/Button';
 
 export {
-  IContextualMenuItem,
-  IContextualMenuProps,
-  IContextualMenuRenderItem
+    IContextualMenuItem,
+    IContextualMenuProps,
+    IContextualMenuRenderItem
 } from '@fluentui/react/lib/ContextualMenu';
 
 export { IDropdown, IDropdownProps, IDropdownOption } from '@fluentui/react/lib/Dropdown';
@@ -28,7 +28,3 @@ export { IDialogProps } from '@fluentui/react/lib/Dialog';
 export { IStyle, ITheme, IPalette } from '@fluentui/react/lib/Styling';
 
 export { ICSSRule, ICSSPixelUnitRule } from '@uifabric/merge-styles/lib/IRawStyleBase';
-
-export interface IReactCast<T> {
-  (props: T & React.DOMAttributes<{}>, children: Element[]): JSX.Element
-}

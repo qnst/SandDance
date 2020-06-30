@@ -11,6 +11,7 @@ import {
 import { Search, SearchExpressionGroup } from '@msrvida/search-expression';
 import { Spec } from 'vega-typings';
 import {
+    Insight,
     SpecCapabilities,
     SpecColorSettings,
     SpecLanguage,
@@ -163,6 +164,11 @@ export interface ViewerOptions extends SpecViewOptions {
      * Optional handler to reset the camera after chart is rendered.
      */
     onNewViewStateTarget?: () => boolean;
+
+    /**
+     * Optional flag to preserve the WebGL canvas.
+     */
+    preserveDrawingBuffer?: boolean;
 
     /**
      * Z value of selection polygons.
@@ -356,4 +362,15 @@ export interface SelectionState {
 export interface TooltipOptions {
     exclude?: (columnName: string) => boolean;
     displayValue?: (value: any) => string;
+}
+
+/**
+ * Saved metadata about an Insight.
+ */
+export interface Snapshot {
+    title?: string;
+    description?: string;
+    insight?: Insight;
+    image?: string;
+    bgColor?: string;
 }
